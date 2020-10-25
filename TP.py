@@ -142,6 +142,8 @@ y = np.append(y,3 + 0.5 * np.random.normal(size=n_outliers ))
 x = x.reshape(x.shape[0],1)
 y = y.reshape(y.shape[0],1)
 
+plt.scatter(x, y)
+plt.show()
 
 #X = np.hstack((x,np.ones(x.shape)))
 
@@ -152,12 +154,6 @@ y = y.reshape(y.shape[0],1)
 #print(reg.predict(X)[0])
 
 #theta  = np.random.randn(2,1)
-
-
-
-
-
-
 
 
 
@@ -174,7 +170,7 @@ k = 40
 t = 5
 d = 50
 
-meilleur_modele, meilleur_ensemble_points, meilleur_erreur = RANSAC(x, y,taille, n, k, t, d)
+#meilleur_modele, meilleur_ensemble_points, meilleur_erreur = RANSAC(x, y,taille, n, k, t, d)
 
 #print("meilleur_modele is :")
 #print(meilleur_modele)
