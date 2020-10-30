@@ -4,7 +4,6 @@ from sklearn import svm
 import random
 from matplotlib import pyplot as plt
 
-
 def SVM_Enssemble(nb_classifier,x_train,y_train,percentage):
 	models = []
 	for i in range(nb_classifier):
@@ -74,7 +73,6 @@ y_test = y[:len(y)-int(len(y)*train_set)]
 
 
 
-
 def performance(y_test,y_pred):
 	cpt = 0
 	for i in range(len(y_test)):
@@ -114,4 +112,12 @@ def performance(y_test,y_pred):
 #plt.plot(ox, oy)
 #plt.show()
 
-#https://careers.3ds.com/fr/jobs/stage-marketing-data-analyst-h-f-515755
+
+
+# the commun point between SVM Ensemble and multi-class SVM is that both of them use a set of
+# weak SVMs which are trained to construt a strong model given a better results 
+
+
+#the dissrence is the way of training our models 
+#SVM Ensemble use diffrent random part pf the train-set
+# but the one_vs_on_model or one_vs_ all_model uses a diffrent type of classes to distingush for the traiing phase)
